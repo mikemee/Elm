@@ -10,7 +10,7 @@ Let's build a counter:
 
 ## Functional core
 
-* Create `Module`:
+* Module:
     ```swift
     struct Counter: Module {
 
@@ -60,7 +60,7 @@ Let's build a counter:
     }
     ```
 
-* Instantiate `Program`:
+* Program:
     ```swift
     let counter = Counter.makeProgram()
     ```
@@ -82,6 +82,11 @@ Let's build a counter:
         @IBOutlet var incrementButton: UIBarButtonItem?
         @IBOutlet var decrementButton: UIBarButtonItem?
 
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            counter.subscribe(self)
+        }
+
         func update(presenting view: View) {
             title = view.title
             countLabel?.text = view.count
@@ -90,11 +95,6 @@ Let's build a counter:
         }
 
         func update(performing command: Command) {}
-
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            counter.subscribe(self)
-        }
 
         @IBAction func userDidTapIncrementButton() {
             counter.dispatch(counter.view.incrementButton.callback)
