@@ -6,7 +6,7 @@ This is [Elm](http://elm-lang.org) architecture for [Swift](https://swift.org).
 
 Let's build a counter:
 
-<img src="Images/Screenshot.png" width="375" height="667" alt="Screenshot"/>
+<img src="Images/Screenshot.png" width="321" height="569" alt="Screenshot"/>
 
 ## Functional core
 
@@ -68,7 +68,7 @@ Let's build a counter:
 ## Imperative shell
 
 * Storyboard:
-    <img src="Images/Storyboard.png" width="935" height="700" alt="Storyboard"/>
+    <img src="Images/Storyboard.png" width="813" height="601" alt="Storyboard"/>
 
 * View controller:
     ```swift
