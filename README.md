@@ -5,17 +5,8 @@ This is [Elm](http://elm-lang.org) architecture for [Swift](https://swift.org).
 # Interface
 
 ```swift
-public protocol Module {
-
-    associatedtype Message
-    associatedtype Model: Initable
-    associatedtype Command
-    associatedtype View
-
-    static func update(for message: Message, model: inout Model) -> [Command]
-    static func view(for model: Model) -> View
-
-}
+static func update(for message: Message, model: inout Model) -> [Command]
+static func view(for model: Model) -> View
 ```
 
 # Example
